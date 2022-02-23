@@ -2,6 +2,7 @@
 
 def median(arrArg):
     num = len(arrArg)
+    mid = num // 2
     for i in range(num):
         min = i
         for j in range(i, num):
@@ -9,7 +10,7 @@ def median(arrArg):
                 min = j
         arrArg[i], arrArg[min] = arrArg[min], arrArg[i]
         
-    return arrArg
+    return arrArg[mid]
         
 
-print(median([5, 10, 7, 5, 3, 1, 2]))
+print(median([4, 10, 7, 6, 3, 1, 2]))
