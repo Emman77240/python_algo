@@ -14,13 +14,11 @@ def optimizedSort(ar):
             if j == i:
                 modelArr[i] += 1
     
-    for i in range(len(modelArr)):
+    for i, val in enumerate(modelArr):
         if modelArr[i] != 0:
-            num = modelArr[i]
-            while num > 0:
+            for j in range(val):
                 optArr.append(i)
-                num -= 1
-                
+
     return optArr
 
 
